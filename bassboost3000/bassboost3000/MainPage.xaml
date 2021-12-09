@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="bassboost3000.MainPage" Title="Информация о студентах">
+
+    <StackLayout    BackgroundColor="#43506C">
+        <StackLayout Spacing="20" Scale="1" VerticalOptions="CenterAndExpand" Margin="10,0,10,0" >
+            <Label HorizontalOptions="CenterAndExpand" FontSize="20" TextColor="#E9E9EB" Text="Создать карточку"></Label>
+            <Button FontSize="25" Text="&#9998;" CornerRadius="50" BackgroundColor="#3D619B" x:Name="create" Clicked="create_Clicked"></Button>
+            <Label  HorizontalOptions="CenterAndExpand" FontSize="20" TextColor="#E9E9EB" Text="Открыть карточку 'Properties' "></Label>
+            <Button FontSize="25" Text="&#9884;" CornerRadius="50" BackgroundColor="#3D619B"  x:Name="load_Properties" Clicked="load_Properties_Clicked"></Button>
+            <Label  HorizontalOptions="CenterAndExpand" FontSize="20" TextColor="#E9E9EB" Text="Открыть карточу 'Preferences' "></Label>
+            <Button FontSize="25" Text="&#9884;" CornerRadius="50" BackgroundColor="#3D619B"  x:Name="load_Preferences" Clicked="load_Preferences_Clicked"></Button>
+            <Label  HorizontalOptions="CenterAndExpand" FontSize="20" TextColor="#E9E9EB" Text="О проограмме"></Label>
+            <Button FontSize="25" Text="&#10086;" CornerRadius="50" BackgroundColor="#3D619B"  x:Name="info" Clicked="info_Clicked"></Button>
+            <Label  HorizontalOptions="CenterAndExpand" FontSize="20" TextColor="#E9E9EB" Text="Выход"></Label>
+            <Button FontSize="25" Text="&#128711;" CornerRadius="50" BackgroundColor="#3D619B" x:Name="ex" Clicked="ex_Clicked"></Button>
+
+        </StackLayout>
+
+    </StackLayout>
+
+</ContentPage>

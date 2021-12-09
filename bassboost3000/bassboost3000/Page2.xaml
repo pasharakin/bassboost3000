@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="bassboost3000.Page2"
+             Appearing="ContentPage_Appearing">
+    <ContentPage.Content>
+        <ScrollView BackgroundColor="#43506C">
+            <StackLayout Margin="10,0,10,0">
+                <TableView HasUnevenRows="True" Intent="Form">
+                    <TableRoot>
+                        <TableSection Title="Персональные данные">
+
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label FontSize="30" VerticalOptions="Center" HorizontalOptions="FillAndExpand"  Text="Фото студента : "></Label>
+                                    <ImageButton Clicked="photo_Clicked" x:Name="photo" WidthRequest="100" HeightRequest="100"></ImageButton>
+                                </StackLayout>
+
+                            </ViewCell>
+                            <EntryCell x:Name="LastName" Label="Фамилия :" Keyboard="Text" Placeholder="Введите фамилию"></EntryCell>
+
+                            <EntryCell x:Name="FirstName" Label="Имя :" Keyboard="Text" Placeholder="Введите имя"></EntryCell>
+
+                            <EntryCell x:Name="Patronymic" Label="Отчество :" Keyboard="Text" Placeholder="Введите отчество"></EntryCell>
+
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label VerticalOptions="Center" Text="Год рождения :"></Label>
+                                    <DatePicker x:Name="data" DateSelected="data_DateSelected" Margin="-5,0,5,0" ></DatePicker>
+                                    <Label x:Name="age" VerticalOptions="Center" Text="Возраст : &#8220; Выберите дату &#8221;" ></Label>
+                                </StackLayout>
+
+                            </ViewCell>
+
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Margin="15,0,15,0">
+                                    <Label Text="Пол :" VerticalOptions="Center" Margin="5,0,10,0"></Label>
+                                    <Picker x:Name="pick_pol" Margin="10,0,20,0" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" >
+                                        <Picker.Items>
+                                            <x:String>Мужской</x:String>
+                                            <x:String>Женский</x:String>
+                                        </Picker.Items>
+                                    </Picker>
+                                </StackLayout>
+                            </ViewCell>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Margin="15,0,15,0">
+                                    <Label Text="Номер курса :" VerticalOptions="Center" Margin="5,0,10,0"></Label>
+                                    <Picker x:Name="pick_nomer_kursa" Margin="10,0,20,0" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" >
+                                        <Picker.Items>
+                                            <x:String>1</x:String>
+                                            <x:String>2</x:String>
+                                            <x:String>3</x:String>
+                                            <x:String>4</x:String>
+                                        </Picker.Items>
+                                    </Picker>
+                                </StackLayout>
+                            </ViewCell>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Margin="15,0,15,0">
+                                    <Label Text="Форма обучения :" VerticalOptions="Center" Margin="5,0,10,0"></Label>
+                                    <Picker x:Name="pick_form" Margin="10,0,20,0" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" >
+                                        <Picker.Items>
+                                            <x:String>Очная</x:String>
+                                            <x:String>Заочная</x:String>
+                                            <x:String>Очно-заочная</x:String>
+                                        </Picker.Items>
+                                    </Picker>
+                                </StackLayout>
+                            </ViewCell>
+                            <SwitchCell x:Name="star" OnColor="#EF4B4C" Text="Является старостой"></SwitchCell>
+                            <SwitchCell x:Name="projiv" OnColor="#EF4B4C" Text="Проживает ли в общежития"></SwitchCell>
+
+                        </TableSection>
+
+                        <TableSection x:Name="phone" Title="Телефоны" >
+                            <ViewCell  Height="80">
+                                <StackLayout >
+                                    <StackLayout Orientation="Horizontal" >
+                                        <Entry x:Name="a" Placeholder = "Введите главный телефон" FontSize="20" VerticalOptions="Center" MaxLength="11" Keyboard="Numeric" HorizontalOptions="FillAndExpand"></Entry>
+                                        <Button x:Name="add"  Clicked="add_Clicked" Margin="0,0,-50,0" BackgroundColor="#EF4B4C" CornerRadius="50" Scale="0.5" FontSize="30"  HorizontalOptions="End" Text="+"></Button>
+                                        <Button x:Name="del"  Clicked="del_Clicked" BackgroundColor="#EF4B4C"  CornerRadius="50"  Scale="0.5" FontSize="30"  HorizontalOptions="End" Text="&#8722;"></Button>
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </TableSection>
+
+                        <TableSection Title="Дополнитнльная информация">
+                            <ViewCell Height="200">
+                                <StackLayout>
+                                    <Editor x:Name="aboutstudent" FontSize="20" Placeholder="Введите информацию о студенте" AutoSize="TextChanges" MaxLength="255"></Editor>
+                                </StackLayout>
+                            </ViewCell>
+                        </TableSection>
+
+                        <TableSection>
+                            <ViewCell>
+                                <StackLayout Margin="10,10,10,10" Orientation="Horizontal">
+                                    <Button x:Name="save"  CornerRadius="50" BackgroundColor="#EF4B4C" Text="Сохранить" Clicked="save_Clicked" HorizontalOptions="FillAndExpand"></Button>
+                                    <Button x:Name="back"  CornerRadius="50" BackgroundColor="#EF4B4C" Text="Назад/Удалить" Clicked="back_Clicked"></Button>
+                                </StackLayout>
+                            </ViewCell>
+                        </TableSection>
+
+                    </TableRoot>
+                </TableView>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
